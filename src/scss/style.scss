@@ -1,0 +1,249 @@
+$orange: #FE8663;
+$grey: #F0F0F0;
+
+body {
+    position: relative;
+
+    &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0px; 
+        left: 0px;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.1);
+    }
+}
+
+.wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.container {
+    width: 620px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.btn--close {
+    color: #fff;
+    position: absolute;
+    right: 12px;
+    top: 7px;
+    z-index: 2;
+    transform: rotate(45deg);
+    font-size: 40px;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.header {
+    width: 100%;
+    font-weight: 500;
+    background-color: $orange;
+    display: flex;
+    align-items: center;
+}
+
+.header__title {
+    color: #ffffff;
+    font-size: 16px;
+    margin: 15px 0 15px 15px;
+}
+
+.content {
+    display: flex;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    border-right: 1px solid $grey;
+
+    &:first-child > .column__results{
+        margin-right: 10px;
+    }
+}
+
+.column__results {
+    height: 325px;
+    overflow-y: auto;
+    padding: 0 10px;
+}
+
+.column__search {
+    width: 100%;
+    height: 45px;
+    background-color: $grey;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+}
+
+.search {
+    width: 100%;
+    min-height: 30px;
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    color: #9f9f9f;
+    border-radius: 15px;
+}
+
+.search__icon {
+    width: 15px;
+    height: 15px;
+    background: url("../img/search.png") no-repeat;
+    margin: 0 5px 0 10px;
+}
+
+.search__text {
+    border: none;
+    width: 85%;
+    font: 300 12px 'Fira Sans', sans-serif;
+    outline: none;
+}
+
+.column__title {
+    display: inline-block;
+    color: #505050;
+    margin: 10px 15px 0;
+    padding-bottom: 5px;
+    border-bottom: 1px solid $grey;
+}
+
+.friend-item {
+    width: 100%;
+    height: 60px;   
+    display: flex;
+    align-items: center;
+    user-select: none;
+    
+    &:last-child {
+        border-bottom: 1px solid $grey;
+    }
+
+    &:hover {
+        background-color: $grey;
+    }
+}
+
+.friend-item__photo {
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    margin: 0 5px;
+}
+
+.friend-item__arrow {
+    margin: 0 10px 0 auto;
+    width: 20px;
+    height: 20px;
+    display: block;
+    position: relative;
+
+    &:before, &:after {
+        content: ' ';
+        position: absolute;
+        left: 11px;
+        height: 12px;
+        width: 3px;
+        background-color: #c4c4c4;
+        border-radius: 2.5px;
+    }
+
+    &:after {
+        transform: rotate(-45deg);
+        top: 2px;
+    }
+
+    &:before {
+        transform: rotate(45deg);
+        top: 9px;
+    }
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.friend-item__del {
+    margin: 0 10px 0 auto;
+    width: 20px;
+    height: 20px;
+    display: block;
+    position: relative;
+
+    &:before, &:after {
+        content: ' ';
+        position: absolute;
+        top: 0;
+        left: 7px;
+        height: 15px;
+        width: 3px;
+        background-color: #c4c4c4;
+        border-radius: 2.5px;
+    }
+
+    &:before {
+        transform: rotate(45deg);
+    }
+
+    &:after {
+        transform: rotate(-45deg);
+    }
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.footer {
+    width: 100%;
+    height: 50px;
+    background-color: $grey;
+    display: flex;
+    align-items: center;
+}
+
+.footer__btn {
+    color: #ffffff;
+    background-color: $orange;
+    font: 300 12px 'Fira Sans', sans-serif;
+    width: 85px;
+    height: 30px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    margin: 0 5px 0 auto;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 0px;
+    border-radius: 2px;
+    background-color:#c4c4c4;
+}
+
+::-webkit-resizer{
+    background-repeat: no-repeat;
+    width: 3px;
+    height: 0px
+}
+
+::-webkit-scrollbar{
+    width: 3px;
+}
+
+.hidden {
+    display: none;
+}
