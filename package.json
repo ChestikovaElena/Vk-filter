@@ -1,7 +1,7 @@
 {
   "name": "vk-filter",
   "version": "1.0.0",
-  "description": "Чат\r Учебное приложение в рамках курса LoftSchool \"Комплексное обучение JavaScript\"",
+  "description": "VK-filter\r Учебное приложение в рамках курса LoftSchool \"Комплексное обучение JavaScript\"",
   "main": "index.js",
   "scripts": {
     "dev": "webpack serve --config ./webpack.config.js",
